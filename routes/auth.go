@@ -16,7 +16,7 @@ func Auth() {
 
 	loginController := auth.NewLoginController(userService, hashService)
 	registerController := auth.NewRegisterController(userService, hashService, mailService)
-	newPasswordController := auth.NewPasswordController(userService, passwordResetService)
+	newPasswordController := auth.NewPasswordController(userService, passwordResetService, hashService)
 	forgotPasswordController := auth.NewForgotPasswordController(userService, passwordResetService, mailService)
 	verifyEmailController := auth.NewVerifyEmailController()
 

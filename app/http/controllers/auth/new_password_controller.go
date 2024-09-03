@@ -14,10 +14,11 @@ type PasswordController struct {
 	hashService          authServices.Hash
 }
 
-func NewPasswordController(user authServices.User, passwordReset authServices.PasswordReset) *PasswordController {
+func NewPasswordController(user authServices.User, passwordReset authServices.PasswordReset, hashService authServices.Hash) *PasswordController {
 	return &PasswordController{
 		userService:          user,
 		passwordResetService: passwordReset,
+		hashService:          hashService,
 	}
 }
 
