@@ -10,7 +10,6 @@ type User struct {
 	Name            string
 	Email           string
 	Password        string
-	RememberToken   string
 	EmailVerifiedAt *carbon.DateTime
 	orm.SoftDeletes
 }

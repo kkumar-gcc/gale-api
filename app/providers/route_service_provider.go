@@ -21,7 +21,7 @@ func (receiver *RouteServiceProvider) Boot(app foundation.Application) {
 	receiver.configureRateLimiting()
 
 	routes.Web()
-	routes.Api()
+	routes.Auth()
 }
 
 func (receiver *RouteServiceProvider) configureRateLimiting() {
